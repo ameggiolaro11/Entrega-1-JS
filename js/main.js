@@ -1,7 +1,27 @@
 
 /* ALGORITMO CON CICLO */ 
 
+let intentosMaximos = 3;
+let intentos = 0;
+let usuarioValido = "ameggiolaro";
+let contraseñaValida = "123456";
 
+while (intentos < intentosMaximos) {
+  let usuario = prompt("Ingrese su usuario:");
+  let contraseña = prompt("Ingrese su contraseña:");
+
+  if (usuario === usuarioValido && contraseña === contraseñaValida) {
+    alert("Inicio de sesión exitoso. ¡Bienvenido a RASH SPORTS!");
+    break;
+  } else {
+    intentos++;
+    alert("Credenciales incorrectas. Intentos restantes: " + (intentosMaximos - intentos));
+  }
+}
+
+if (intentos === intentosMaximos) {
+  alert("Has excedido el número máximo de intentos. Tu cuenta ha sido bloqueada.");
+}
 
 
 
