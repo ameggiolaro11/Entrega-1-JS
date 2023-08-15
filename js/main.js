@@ -5,6 +5,7 @@ let intentosMaximos = 3;
 let intentos = 0;
 let usuarioValido = "ameggiolaro";
 let contraseñaValida = "123456";
+let cuentaBloqueada = false;
 
 while (intentos < intentosMaximos) {
   let usuario = prompt("Ingrese su usuario:");
@@ -21,7 +22,9 @@ while (intentos < intentosMaximos) {
 
 if (intentos === intentosMaximos) {
   alert("Has excedido el número máximo de intentos. Tu cuenta ha sido bloqueada.");
+  cuentaBloqueada = true;
 }
+
 
 
 
@@ -29,14 +32,18 @@ if (intentos === intentosMaximos) {
 
 
 /* ALGORITMO CON UNA CONDICIONAL */
-
-const respuesta = prompt("¿Te subscribiste a nuestro RASH SPORTS PREMIUM? (Responde 'si' o 'no')")
-
+if (!cuentaBloqueada) {
+  const respuesta = prompt("¿Te subscribiste a nuestro RASH SPORTS PREMIUM? (Responde 'si' o 'no')")
 if (respuesta === 'si') {
-    alert("¡Felicidades! ERES PARTE DEL RASH SPORTS PREMIUM.");
+  alert("¡Felicidades! ERES PARTE DEL RASH SPORTS PREMIUM.");
 } else if (respuesta === 'no') {
-    alert("¡Subscribite al PREMIUM para obtener ofertas imperdibles, por tan solo $200 mensuales!");
+  alert("¡Subscribite al PREMIUM para obtener ofertas imperdibles, por tan solo $200 mensuales!");
 } else {
-    alert("Respuesta invalida. Por favor responde 'si' o 'no'.");
-    
+  alert("Respuesta invalida. Por favor responde 'si' o 'no'.");
 }
+}
+
+
+
+
+
