@@ -120,11 +120,11 @@ let productoBuscado = productos.find(producto => producto.id === 4)
 console.log(productoBuscado)
 alert(productoBuscado.nombre)
 
-/* FILTER */
+/* FILTER & FOR EACH */
 let productosMasCaros = productos.filter(producto => producto.precio >20000)
 console.log(productosMasCaros)
 console.log(productos.length)
 
 let salida = "" 
-productosMasCaros.forEach(producto => salida = salida + producto.precio + " " + producto.material + "\n")
+productosMasCaros.forEach(producto => salida = salida + producto.precio + " " + producto.nombre + " " + producto.material + "\n")
 alert(salida)
