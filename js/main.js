@@ -1,4 +1,5 @@
 
+/* 1era PRE-ENTREGA */
 /* ALGORITMO CON CICLO */ 
 
 let intentosMaximos = 3;
@@ -112,3 +113,18 @@ if (carrito.length > 0) {
 } else {
   console.log("El carrito está vacío.");
 }
+
+/* FIND */
+
+let productoBuscado = productos.find(producto => producto.id === 4)
+console.log(productoBuscado)
+alert(productoBuscado.nombre)
+
+/* FILTER */
+let productosMasCaros = productos.filter(producto => producto.precio >20000)
+console.log(productosMasCaros)
+console.log(productos.length)
+
+let salida = "" 
+productosMasCaros.forEach(producto => salida = salida + producto.precio + " " + producto.material + "\n")
+alert(salida)
