@@ -68,3 +68,47 @@ function ordenar(listaAOrdenar, ascendente, propiedad) {
   return listaAOrdenar
 }
 console.log(ordenar(productos, true, "precio"))
+
+/* Array carrito */
+
+let carrito = [];
+function mostrarListadoProductos() {
+console.log("Listado de Productos:");
+for (let producto of productos) {
+  console.log(`ID: ${producto.id} - Producto: ${producto.nombre} - Precio: $${producto.precio}`);
+}
+}
+
+let continuarAgregando = true;
+while (continuarAgregando) {
+  mostrarListadoProductos();
+
+  let opcion = prompt("Ingrese ID del producto que desea agregar al carrito (o 'salir' para finalizar)");
+
+  if (opcion.toLowerCase() === "salir") {
+    continuarAgregando = false;
+  } else {
+    let productoSeleccionado = productos.find(producto => producto.id == opcion);
+
+    if (productoSeleccionado) {
+      carrito.push(productoSeleccionado);
+      console.log(`Producto agregado al carrito: ${productoSeleccionado.nombre}`);
+    } else {
+      alert("El producto ingresado no existe");
+    }
+  }
+}
+
+// Calcular el total de los productos en el carrito
+let total = 0;
+for (let productoCarrito of carrito) {
+  total += productoCarrito.precio;
+}
+
+// Mostrar contenido final del carrito y el total
+if (carrito.length > 0) {
+  console.log("Contenido del Carrito:", carrito);
+  console.log(`Total del carrito: $${total}`);
+} else {
+  console.log("El carrito está vacío.");
+}
