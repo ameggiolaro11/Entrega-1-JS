@@ -100,13 +100,13 @@ while (continuarAgregando) {
   }
 }
 
-// Calcular el total de los productos en el carrito
+// CALCULAR TOTAL PRODUCTOS CARRITO
 let total = 0;
 for (let productoCarrito of carrito) {
   total += productoCarrito.precio;
 }
 
-// Mostrar contenido final del carrito y el total
+// CONTENIDO TOTAL CARRITO + CONTENIDO
 if (carrito.length > 0) {
   console.log("Contenido del Carrito:", carrito);
   console.log(`Total del carrito: $${total}`);
