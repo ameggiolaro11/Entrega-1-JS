@@ -52,3 +52,19 @@ let productos = [
   { id: 7, nombre: "Botines Puma Goity", categoria: "Hockey", stock: 7, precio: 25000, material: "Nailon" }
 ];
 
+function ordenar(listaAOrdenar, ascendente, propiedad) {
+  listaAOrdenar.sort((a, b) => {
+    if (a[propiedad] > b[propiedad]) {
+      return 1
+    }
+    if (a[propiedad] < b[propiedad]) {
+      return -1
+    }
+    return 0
+  })
+  if (!ascendente) {
+    listaAOrdenar.reverse()
+  } 
+  return listaAOrdenar
+}
+console.log(ordenar(productos, true, "precio"))
