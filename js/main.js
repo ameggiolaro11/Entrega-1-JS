@@ -26,11 +26,6 @@ if (intentos === intentosMaximos) {
 }
 
 
-
-
-
-
-
 /* ALGORITMO CON UNA CONDICIONAL */
 if (!cuentaBloqueada) {
   const respuesta = prompt("¿Te subscribiste a nuestro RASH SPORTS PREMIUM? (Responde 'si' o 'no')")
@@ -45,5 +40,15 @@ if (respuesta === 'si') {
 
 
 
+/* 2DA PRE-ENTREGA */
 
+let productos = [
+  {id: 1, nombre: "Botines Mercurial Nike", categoria: "futbol", stock: 16, precio: 25000, material: "Poliester"}
+  {id: 2, nombre: "Botines Raptor Adidas", categoria: "futbol", stock: 12, precio: 27500, material: "Gore-tex"}
+  {id: 3, nombre: "Botines Total 90 Nike tapones titanio", categoria: "rugby", stock: 10, precio: 15000, material: "Cuero"}
+  {id: 4, nombre: "Zapatillas Paddle", categoria: "Paddle", stock: 6, precio: 45000, material: "Caucho"}
+  {id: 5, nombre: "Velocity Tenis", categoria: "Tenis", stock: 36, precio: 26700, material: "Poliester"}
+  {id: 6, nombre: "Botines Futsal", categoria: "futsal", stock: 6, precio: 15000, material: "Piel sintetica"}
+  {id: 7, nombre: "Botines Puma Goity", categoria: "Hockey", stock: 7, precio: 25000, material: "Nailon"}
+]
 
